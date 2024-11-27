@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trigonometrische Funktionen mit edgars</title>
+</head>
+<body>
+  <h1>Wellen verstehen: Sinus, Cosinus & Tangens (mit edgars!)</h1>
+  <p>Ändere die Werte, wähle eine Funktion und beobachte, wie die edgars entlang des Graphen tanzen!</p>
+  <div>
+    <label for="amplitude">Amplitude (Höhe der Wellen):</label>
+    <input type="number" id="amplitude" step="0.1" value="1">
+    <span>Wie hoch oder tief die Wellen gehen.</span>
+    <br>
+    <label for="frequency">Frequenz (Wie oft):</label>
+    <input type="number" id="frequency" step="0.1" value="1">
+    <span>Wie viele Wellen es in einem Abschnitt gibt.</span>
+    <br>
+    <label for="phase">Phase (Startpunkt):</label>
+    <input type="number" id="phase" step="1" value="0">
+    <span>Wo die Welle anfängt.</span>
+    <br>
+    <label for="function">Funktion:</label>
+    <select id="function">
+      <option value="sin">Sinus</option>
+      <option value="cos">Cosinus</option>
+      <option value="tan">Tangens</option>
+    </select>
+  </div>
+  <p><strong>Formel:</strong> <span id="formula"></span></p>
+  <p><strong>Erster Punkt:</strong> \(x = <span id="first-x"></span>, y = <span id="first-y"></span>\)</p>
+  <canvas id="trig-canvas" width="800" height="400" style="border:1px solid black;"></canvas>
+  <script src="./dist/app.js"></script>
+</body>
+</html>
